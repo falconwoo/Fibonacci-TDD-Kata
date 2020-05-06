@@ -9,7 +9,7 @@ public class Fibonacci {
 
     public int getValue() {
         int value = -1;
-        if (index == 1) {
+        if (index == 1 || index == 2) {
             value = 1;
         }
         return value;
