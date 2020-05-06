@@ -22,4 +22,13 @@ public class FibonacciTest {
 
         assertEquals(1, fibonacciValue);
     }
+
+    @Test
+    void should_return_55_when_get_fibonacci_given_index_is_10 (){
+        int index = 10;
+
+        int fibonacciValue = new Fibonacci(index).getValue();
+
+        assertEquals(55, fibonacciValue);
+    }
 }
