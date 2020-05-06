@@ -7,8 +7,8 @@ public class Fibonacci {
         this.index = index;
     }
 
-    public int getValue() {
-        int value = -1;
+    public long getValue() {
+        long value = -1;
         if (index == 1 || index == 2) {
             value = 1;
         }
