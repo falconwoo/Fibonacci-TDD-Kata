@@ -13,8 +13,18 @@ public class Fibonacci {
             value = 1;
         }
         if (index > 2) {
-            value = new Fibonacci(index - 1).getValue() + new Fibonacci(index - 2).getValue();
+            long fn_2 = 1;
+            long fn_1 = 1;
+            long fn = 0;
+            for (int i = 0; i < index - 2; i ++){
+                fn = fn_2 + fn_1;
+                fn_2 = fn_1;
+                fn_1 = fn;
+            }
+            value = fn;
         }
         return value;
     }
+
+
 }
