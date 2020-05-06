@@ -3,6 +3,7 @@ package kata.tdd.fibonacci;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class FibonacciTest {
     @Test
@@ -39,5 +40,12 @@ public class FibonacciTest {
         long fibonacciValue = new Fibonacci(index).getValue();
 
         assertEquals(12586269025L, fibonacciValue);
+    }
+
+    @Test
+    void should_throw_exception_when_get_fibonacci_given_index_less_than_0 (){
+        int index = -1;
+
+        assertThrows(IllegalArgumentException.class, () -> new Fibonacci(index).getValue());
     }
 }

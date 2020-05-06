@@ -9,6 +9,9 @@ public class Fibonacci {
 
     public long getValue() {
         long value = -1;
+        if (index < 0) {
+            throw new IllegalArgumentException();
+        }
         if (index == 1 || index == 2) {
             value = 1;
         }
